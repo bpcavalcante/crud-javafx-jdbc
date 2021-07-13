@@ -29,6 +29,8 @@ import model.service.DepartmentService;
 public class DepartmentListController implements Initializable {
 
 	private DepartmentService service;
+	
+	
 
 	@FXML
 	private TableView<Department> tableViewDepartment;
@@ -85,6 +87,7 @@ public class DepartmentListController implements Initializable {
 			
 			DepartmentFormController controller = loader.getController();
 			controller.setDepartment(obj);
+			controller.setDepartmentService(service);
 			controller.updateFormData();
 
 			Stage dialogStage = new Stage();
